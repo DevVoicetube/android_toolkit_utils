@@ -3,6 +3,10 @@ package com.voicetube.toolkit.utils;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.util.Base64;
+
+import java.security.MessageDigest;
 
 /**
  * Created by user on 5/1/2015.
@@ -63,5 +67,33 @@ public class UtilApp {
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
+    }
+
+    public static int getkeyStoreHash() {
+        try {
+            int hashCode = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES).signatures[0].hashCode();
+            return hashCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            return -1;
+        }
+    }
+
+    private static String getFacebookKeyHash(String packageName) {
+        PackageInfo info;
+        try {
+            info = context.getPackageManager().getPackageInfo(packageName, PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md;
+                md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                String keyResult = new String(Base64.encode(md.digest(), 0));//String something = new String(Base64.encodeBytes(md.digest()));
+                return keyResult;
+            }
+            return null;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
 }
