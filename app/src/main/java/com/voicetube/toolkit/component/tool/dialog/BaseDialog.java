@@ -9,7 +9,8 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.holiestar.toolkit.utils.UtilScreen;
+import com.voicetube.toolkit.utils.UtilScreen;
+
 
 /**
  * Created by tony1 on 2/14/2017.
@@ -30,6 +31,7 @@ public abstract class BaseDialog {
     private float maxWidthPercentage=0.9f;
 
     public abstract void initUI(View v);
+    public abstract void initUILayout(View v);
     public abstract void initAction(View v);
     public abstract void initDialog(Dialog dialog);
     public abstract void onShow();
@@ -91,6 +93,7 @@ public abstract class BaseDialog {
         this.viewResourceId=null;
         this.view=null;
         this.initUI(dialogView);
+        this.initUILayout(dialogView);
         this.initAction(dialogView);
         return dialogView;
     }
@@ -133,7 +136,7 @@ public abstract class BaseDialog {
             return;
         }
 
-        boolean isTable=UtilScreen.isTablet();
+        boolean isTable= UtilScreen.isTablet();
         boolean isPhone=!isTable;
         Log.i(TAG,"initDialogSize\tisTable:"+isTable);
         if(isTable){
