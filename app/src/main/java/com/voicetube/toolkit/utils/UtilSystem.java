@@ -1,6 +1,10 @@
 package com.voicetube.toolkit.utils;
 
+import android.content.Context;
 import android.os.Build;
+import android.provider.Settings;
+
+import java.util.UUID;
 
 /**
  * Created by user on 5/1/2015.

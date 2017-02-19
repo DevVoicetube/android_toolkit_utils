@@ -4,8 +4,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 
-import com.holiestar.toolkit.libs.badger.Badger;
-import com.holiestar.toolkit.libs.badger.ShortcutBadgeException;
+import com.voicetube.toolkit.badger.Badger;
+import com.voicetube.toolkit.badger.ShortcutBadgeException;
 
 import java.util.Arrays;
 import java.util.List;

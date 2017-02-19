@@ -7,9 +7,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.holiestar.toolkit.libs.badger.Badger;
-import com.holiestar.toolkit.libs.badger.ShortcutBadgeException;
-import com.holiestar.toolkit.libs.badger.util.CloseHelper;
+import com.voicetube.toolkit.badger.Badger;
+import com.voicetube.toolkit.badger.ShortcutBadgeException;
+import com.voicetube.toolkit.badger.util.CloseHelper;
 
 import java.util.Arrays;
 import java.util.List;

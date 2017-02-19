@@ -8,17 +8,17 @@ import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.util.Log;
 
-import com.holiestar.toolkit.libs.badger.impl.AdwHomeBadger;
-import com.holiestar.toolkit.libs.badger.impl.ApexHomeBadger;
-import com.holiestar.toolkit.libs.badger.impl.AsusHomeLauncher;
-import com.holiestar.toolkit.libs.badger.impl.DefaultBadger;
-import com.holiestar.toolkit.libs.badger.impl.LGHomeBadger;
-import com.holiestar.toolkit.libs.badger.impl.NewHtcHomeBadger;
-import com.holiestar.toolkit.libs.badger.impl.NovaHomeBadger;
-import com.holiestar.toolkit.libs.badger.impl.SamsungHomeBadger;
-import com.holiestar.toolkit.libs.badger.impl.SolidHomeBadger;
-import com.holiestar.toolkit.libs.badger.impl.SonyHomeBadger;
-import com.holiestar.toolkit.libs.badger.impl.XiaomiHomeBadger;
+import com.voicetube.toolkit.badger.impl.AdwHomeBadger;
+import com.voicetube.toolkit.badger.impl.ApexHomeBadger;
+import com.voicetube.toolkit.badger.impl.AsusHomeLauncher;
+import com.voicetube.toolkit.badger.impl.DefaultBadger;
+import com.voicetube.toolkit.badger.impl.LGHomeBadger;
+import com.voicetube.toolkit.badger.impl.NewHtcHomeBadger;
+import com.voicetube.toolkit.badger.impl.NovaHomeBadger;
+import com.voicetube.toolkit.badger.impl.SamsungHomeBadger;
+import com.voicetube.toolkit.badger.impl.SolidHomeBadger;
+import com.voicetube.toolkit.badger.impl.SonyHomeBadger;
+import com.voicetube.toolkit.badger.impl.XiaomiHomeBadger;
 
 import java.util.LinkedList;
 import java.util.List;

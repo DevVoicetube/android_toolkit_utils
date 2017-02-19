@@ -18,7 +18,8 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.holiestar.toolkit.R;
+import com.voicetube.toolkit.R;
+
 
 public class ImageViewCircle extends ImageView {
 
