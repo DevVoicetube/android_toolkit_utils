@@ -52,6 +52,7 @@ public class RecyclerViewSpacing extends RecyclerView.ItemDecoration {
 
 
 
+
     @Override
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
@@ -59,7 +60,6 @@ public class RecyclerViewSpacing extends RecyclerView.ItemDecoration {
         if (orientation == -1) {
             orientation = getOrientation(parent);
         }
-
         if (spanCount == -1) {
             spanCount = getTotalSpan(parent);
         }
