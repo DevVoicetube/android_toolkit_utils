@@ -13,11 +13,12 @@ import java.security.MessageDigest;
  */
 public class UtilApp {
     private static Context context;
+
     public static void initialize(Context _context) {
         context = _context;
     }
 
-    public static boolean isAppInstalled( String packageName) {
+    public static boolean isAppInstalled(String packageName) {
         try {
             context.getPackageManager().getPackageInfo(packageName, 0);
             return true;
@@ -26,11 +27,11 @@ public class UtilApp {
         }
     }
 
-    public static int getVersionCode( String packageName){
+    public static int getVersionCode(String packageName) {
         try {
             PackageManager manager = context.getPackageManager();
-            PackageInfo info  = manager.getPackageInfo(packageName, 0);
-            int versionCode=info.versionCode;
+            PackageInfo info = manager.getPackageInfo(packageName, 0);
+            int versionCode = info.versionCode;
             return versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             return 0;
@@ -49,7 +50,7 @@ public class UtilApp {
         return null;
     }
 
-    public static void startApp(Context context, String packageName){
+    public static void startApp(Context context, String packageName) {
         try {
             PackageManager manager = context.getPackageManager();
             context.startActivity(manager.getLaunchIntentForPackage(packageName));
@@ -57,8 +58,8 @@ public class UtilApp {
         }
     }
 
-    public static boolean hasAndroidWear(){
-        if(android.os.Build.VERSION.SDK_INT < 18){
+    public static boolean hasAndroidWear() {
+        if (android.os.Build.VERSION.SDK_INT < 18) {
             return false;
         }
         try {
@@ -95,5 +96,29 @@ public class UtilApp {
             return null;
         }
 
+    }
+
+    public static boolean hasGooglePlay() {
+        return isAppInstalled("com.android.vending");
+    }
+
+    public static boolean hasWeChat() {
+        return isAppInstalled("com.tencent.mm");
+    }
+
+    public static boolean hasFacebookMessenger() {
+        return isAppInstalled("com.facebook.orca");
+    }
+
+    public static boolean hasLine() {
+        return isAppInstalled("jp.naver.line.android");
+    }
+
+    public static boolean hasKakaoTalk() {
+        return isAppInstalled("com.kakao.talk");
+    }
+
+    public static boolean hasWhatsapp() {
+        return isAppInstalled("com.whatsapp");
     }
 }

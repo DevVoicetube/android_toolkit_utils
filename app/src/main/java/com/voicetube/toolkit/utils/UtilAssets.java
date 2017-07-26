@@ -20,7 +20,7 @@ public class UtilAssets {
         context = _context;
     }
 
-    public static void copyToFileAsync(final String assetsPath,final String filePath) {
+    public static void copyToFileAsync(final String assetsPath, final String filePath) {
         new Thread(new Runnable() {
             @Override
             public void run() {

@@ -17,13 +17,13 @@ import java.util.ArrayList;
 public class UtilDrawable {
 
 
-    public static Drawable getSquare(int color,int cornerLeftTop,int cornerRightTop,int cornerRightBottom,int cornerLeftBottom){
+    public static Drawable getSquare(int color, int cornerLeftTop, int cornerRightTop, int cornerRightBottom, int cornerLeftBottom){
         GradientDrawable gradientDrawable = new GradientDrawable(GradientDrawable.Orientation.TL_BR, new int[] { color, color, color});
         gradientDrawable.setCornerRadii(getCorner(cornerLeftTop,cornerRightTop,cornerRightBottom,cornerLeftBottom));
         return gradientDrawable;
     }
 
-    public static Drawable getSquare(int colorStart,int colorEnd,GradientDrawable.Orientation orientation,int cornerLeftTop,int cornerRightTop,int cornerRightBottom,int cornerLeftBottom){
+    public static Drawable getSquare(int colorStart, int colorEnd, GradientDrawable.Orientation orientation, int cornerLeftTop, int cornerRightTop, int cornerRightBottom, int cornerLeftBottom){
         GradientDrawable gradientDrawable = new GradientDrawable(orientation, new int[] { colorStart, colorEnd});
         gradientDrawable.setCornerRadii(getCorner(cornerLeftTop,cornerRightTop,cornerRightBottom,cornerLeftBottom));
         return gradientDrawable;
@@ -50,7 +50,7 @@ public class UtilDrawable {
             return 0x00000000;
         }
     }
-
+    
     public static void changeBackgroundColorAndTextColor(final ArrayList<View> views, final int newColor, int milliscond){
         if(views==null || views.size()==0){
             return;

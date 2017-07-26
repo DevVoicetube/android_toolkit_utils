@@ -76,7 +76,7 @@ public class TTSPlayer implements TextToSpeech.OnInitListener {
     @Override
     public void onInit(int status) {
         if (status == TextToSpeech.SUCCESS) {
-            available=tts.isLanguageAvailable(Locale.US)==TextToSpeech.LANG_COUNTRY_AVAILABLE;
+            available=tts.isLanguageAvailable(Locale.US)== TextToSpeech.LANG_COUNTRY_AVAILABLE;
             tts.setLanguage(Locale.US);
             tts.setSpeechRate(0.7f);
         } else {

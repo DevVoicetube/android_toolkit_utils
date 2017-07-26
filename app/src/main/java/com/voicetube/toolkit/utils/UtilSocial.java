@@ -40,7 +40,7 @@ public class UtilSocial {
         }
     }
 
-    public static void shareUrl(Context context, String url,String shareTitle) {
+    public static void shareUrl(Context context, String url, String shareTitle) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, url);
@@ -103,7 +103,7 @@ public class UtilSocial {
 
     }
 
-    public static void goLine(Context context,String accountName) {
+    public static void goLine(Context context, String accountName) {
         Intent i = null;
         try {
             PackageManager manager = context.getPackageManager();

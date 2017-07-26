@@ -53,7 +53,7 @@ public class ViewPagerManager {
         }
     }
 
-    public void addView(View view,String title){
+    public void addView(View view, String title){
         if(views==null || titles==null){
             views = new ArrayList<>();
             titles=new ArrayList<>();

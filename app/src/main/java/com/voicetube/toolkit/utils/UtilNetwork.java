@@ -31,11 +31,11 @@ public class UtilNetwork {
     }
 
     public static boolean isWiFi(){
-        return getConnectionType()==ConnectivityManager.TYPE_WIFI;
+        return getConnectionType()== ConnectivityManager.TYPE_WIFI;
     }
 
     public static boolean isMobile(){
-        return getConnectionType()==ConnectivityManager.TYPE_MOBILE;
+        return getConnectionType()== ConnectivityManager.TYPE_MOBILE;
     }
 
 }

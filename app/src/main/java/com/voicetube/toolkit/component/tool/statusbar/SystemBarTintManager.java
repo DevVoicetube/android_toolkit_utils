@@ -342,12 +342,12 @@ public class SystemBarTintManager {
         decorViewGroup.addView(mNavBarTintView);
     }
 
-    public static SystemBarTintManager init(Activity avtivity,boolean EnableStatusBar,boolean EnableNavigateBar,int StatusColor,int NavigationColor){
+    public static SystemBarTintManager init(Activity avtivity, boolean EnableStatusBar, boolean EnableNavigateBar, int StatusColor, int NavigationColor){
         SystemBarTintManager tintManager=null;
     	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 			Window win = avtivity.getWindow();
 			WindowManager.LayoutParams winParams = win.getAttributes();
-			int Flag_Oringin=Integer.valueOf(winParams.flags);
+			int Flag_Oringin= Integer.valueOf(winParams.flags);
 			try {
                 if(EnableStatusBar){
                     winParams.flags |= WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;

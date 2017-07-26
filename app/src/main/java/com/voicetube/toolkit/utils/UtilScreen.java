@@ -97,7 +97,7 @@ public class UtilScreen {
         double x = Math.pow(display.getWidth()/displayMetrics.xdpi,2);
         double y = Math.pow(display.getHeight()/displayMetrics.ydpi,2);
         double screenInches = Math.sqrt(x + y);
-        screenInches =  (double)Math.round(screenInches * 10) / 10;
+        screenInches =  (double) Math.round(screenInches * 10) / 10;
         inches=screenInches;
         return inches;
     }

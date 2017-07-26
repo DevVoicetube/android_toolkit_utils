@@ -79,19 +79,26 @@ public class UtilView {
         } else {
             v.getViewTreeObserver().removeGlobalOnLayoutListener(onGlobalLayoutListener);
         }
+
     }
 
-    public static int getViewPosition(View v,RecyclerView recyclerView) {
+    public static Integer getViewPosition(View v, RecyclerView recyclerView) {
+        if(v==null) return null;
         View view = v;
+        if(v.getParent()==null) return null;
         View parent = (View) v.getParent();
-        while (!(parent instanceof RecyclerView)) {
-            view = parent;
-            parent = (View) parent.getParent();
+        try {
+            while (!(parent instanceof RecyclerView)) {
+                view = parent;
+                parent = (View) parent.getParent();
+            }
+            return recyclerView.getChildAdapterPosition(view);
+        } catch (Exception e) {
+            return null;
         }
-        return recyclerView.getChildAdapterPosition(view);
     }
 
-    public static View getChildFromRecyclerView(View v,RecyclerView recyclerView) {
+    public static View getChildFromRecyclerView(View v, RecyclerView recyclerView) {
         View view = v;
         View parent = (View) v.getParent();
         while (!(parent instanceof RecyclerView)) {

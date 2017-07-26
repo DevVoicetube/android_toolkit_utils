@@ -320,7 +320,7 @@ public class UtilFile {
 
     }
 
-    public static void writeAsync(final View view,final String filePath, final Bitmap.CompressFormat compressFormat) {
+    public static void writeAsync(final View view, final String filePath, final Bitmap.CompressFormat compressFormat) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -357,6 +357,20 @@ public class UtilFile {
             context.startActivity(intent);
         } catch (Exception e) {
             Toast.makeText(context,errorMessage, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public static String getFileName(String filePath){
+        if(filePath==null){
+            return null;
+        }
+        boolean isExist=isExist(filePath);
+        if(isExist){
+            String[] temp=filePath.split("/");
+            String FilaName=temp[temp.length-1];
+            return FilaName;
+        }else{
+            return null;
         }
     }
 }

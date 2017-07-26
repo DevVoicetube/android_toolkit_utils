@@ -40,7 +40,7 @@ public class UtilString {
         return maxLength;
     }
 
-    public static String getMaxWidthText(List<String> strs,int sp){
+    public static String getMaxWidthText(List<String> strs, int sp){
         return getMaxWidthText((String[]) strs.toArray(),sp);
     }
 
@@ -89,11 +89,11 @@ public class UtilString {
         }
     }
 
-    public static String getMD5_8Char(String str,int maxLength){
+    public static String getMD5_8Char(String str, int maxLength){
       return getMD5(str,8);
     }
 
-    public static String getMD5(String str,int maxLength){
+    public static String getMD5(String str, int maxLength){
         String md5=getMD5(str);
         if(md5.length()>maxLength){
             return md5.substring(0,maxLength);
